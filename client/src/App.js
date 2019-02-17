@@ -37,11 +37,18 @@ class App extends Component {
   }
 
   handleGo = (e) => {
+    const that = this
     e.preventDefault();
     console.log('SELECTED COURSE')
     console.log(e.target[e.target.options['selectedIndex']].id)
-    this.setState( {setId: e.target[e.target.options['selectedIndex']].id} )
-    setTimeout(this.pullItems, 200)
+    
+    let setSetId = new Promise(function(resolve, reject) {
+      console.log('promise runser')
+     resolve(that.setState( {setId: e.target[e.target.options['selectedIndex']].id} ))
+      
+    });
+
+    setSetId.then(() => this.pullItems())
   }
 
   render() {
@@ -49,7 +56,7 @@ class App extends Component {
       <div className="App">
       <Selector function={this.handleGo}/>
         {this.state.data.map(item => {
-          return <h1><a href={item.link} target="_blank">{item.title}</a></h1>
+          return <h2><a href={item.link} target="_blank">{item.title}</a></h2>
         })}
       </div>
     );
