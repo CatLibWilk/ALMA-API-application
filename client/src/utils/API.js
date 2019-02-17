@@ -3,8 +3,9 @@ import axios from 'axios';
 
 export default {
   
-    getItems: function( req, res ) {
-        return axios.get('/getItems')
+    getItems: function( req ) {
+        console.log(`in util ${req}`)
+        return axios.get('/getItems/' + req)
 
     }
 }
