@@ -41,7 +41,7 @@ class App extends Component {
     console.log('SELECTED COURSE')
     console.log(e.target[e.target.options['selectedIndex']].id)
     this.setState( {setId: e.target[e.target.options['selectedIndex']].id} )
-    this.pullItems();
+    setTimeout(this.pullItems, 200)
   }
 
   render() {
