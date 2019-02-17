@@ -13,6 +13,10 @@ if(process.env.NODE_ENV === 'production'){
     app.use(express.state('client/build'))
 };
 
-app.listen(PORT, () => {
-    console.log(`Listening on port ${PORT}`)
-});
+try{
+    app.listen(PORT, () => {
+        console.log(`Listening on port ${PORT}`)
+    });
+}catch(err){
+    console.log('Error, check if other applications running on same port')
+}
