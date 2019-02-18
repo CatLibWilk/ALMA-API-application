@@ -8,7 +8,7 @@ git clone https://github.com/CatLibWilk/ALMA-API-application.git
 cd ALMA-API-application
 npm install
 
-*upon successful installation
+*upon successful installation*
 
 npm run 
 
