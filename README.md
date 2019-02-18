@@ -5,7 +5,9 @@ Node/React application for calling Ex Libris Alma API and parsing returned JSON 
 in command line:
 
 git clone https://github.com/CatLibWilk/ALMA-API-application.git
+
 cd ALMA-API-application
+
 npm install
 
 *upon successful installation*
