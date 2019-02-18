@@ -39,11 +39,11 @@ class App extends Component {
   handleGo = (e) => {
     const that = this
     e.preventDefault();
-    console.log('SELECTED COURSE')
+
     console.log(e.target[e.target.options['selectedIndex']].id)
     
     let setSetId = new Promise(function(resolve, reject) {
-      console.log('promise runser')
+
      resolve(that.setState( {setId: e.target[e.target.options['selectedIndex']].id} ))
       
     });
