@@ -19,7 +19,7 @@ class App extends Component {
   }
   
   pullItems = () => {
-      console.log(this.state.setId)
+      // console.log(this.state.setId)
       API.getItems(this.state.setId)
           .then(result => {
             const list = result.data
@@ -40,7 +40,7 @@ class App extends Component {
     const that = this
     e.preventDefault();
 
-    console.log(e.target[e.target.options['selectedIndex']].id)
+    // console.log(e.target[e.target.options['selectedIndex']].id)
     
     let setSetId = new Promise(function(resolve, reject) {
 
